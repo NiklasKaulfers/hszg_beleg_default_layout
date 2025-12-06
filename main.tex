@@ -1,0 +1,113 @@
+\documentclass{report}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage{geometry}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage{dirtree}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage[toc,page]{appendix}
+\usepackage[backend=biber,style=ieee]{biblatex}  % or style=numeric, authoryear, etc.
+\addbibresource{main.bib}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+
+
+% -------------------------------------------------------
+% Titelseiten-Informationen
+% -------------------------------------------------------
+\title{Softwaretests in dem Vier-Gewinnt-Projekt der IIb23}
+
+% Art der Arbeit + Studiengang
+\newcommand{\arbeitstyp}{Beleg}
+% Modul / Lehrveranstaltung + Dozent:innen
+\newcommand{\modul}{Modul / Lehrveranstaltung: Grundlagen des Softwaretestens\\
+Dozent: Prof.\ Dr.\ Matthias Längrich}
+% Hochschule + Fakultät
+\newcommand{\hochschule}{
+\includegraphics[height=2.5cm]{LOGO_HSZG_SUBLINE_GRANIT.png}\\[5mm]
+Hochschule Zittau/Görlitz \\ Fakultät Elektrotechnik und Informatik
+}
+
+% Autor
+\author{
+    Niklas Kaulfers \\[2mm]
+    Matrikelnummer: 1064032
+}
+% Betreuer (für BA-Thesis, sonst leer lassen)
+\newcommand{\betreuer}{}
+
+% Datum der Abgabe
+\date{Abgabedatum: \today}
+
+% -------------------------------------------------------
+% Titelseite neu definieren
+% -------------------------------------------------------
+\makeatletter
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+        \centering
+        {\Large \hochschule\par}
+        \vfill
+
+        {\huge \bfseries \@title\par}
+        \vspace{1cm}
+
+        {\large \arbeitstyp\par}
+        \vspace{0.5cm}
+
+        {\large \modul\par}
+        \vspace{0.5cm}
+
+        {\large \betreuer\par}
+        \vspace{1.5cm}
+
+        {\Large \@author\par}
+        \vspace{2cm}
+
+        {\large \@date\par}
+
+        \vfill
+    \end{titlepage}
+}
+\makeatother
+
+
+\fancypagestyle{plain}{%
+    \fancyhead[C]{%
+        \includegraphics[height=1.25cm]{LOGO_HSZG_SUBLINE_GRANIT_ICON_ONLY.png}%
+    }
+    \fancyfoot[L]{\sffamily Kaulfers}
+    \fancyfoot[C]{\sffamily \arbeitstyp}
+    \fancyfoot[R]{\sffamily\thepage}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\begin{document}
+
+\pagestyle{plain}
+\pagenumbering{gobble}
+\setlength{\headheight}{47pt}
+
+\maketitle
+\tableofcontents
+\pagenumbering{arabic}
+
+
+\chapter{Einleitung}
+\section{Ja ja}
+\subsection{Nein nein}
+
+
+\chapter{Fazit}
+
+\begin{appendices}
+\end{appendices}
+\printbibliography\end{document}
