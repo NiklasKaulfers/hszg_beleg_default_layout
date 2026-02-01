@@ -1,0 +1,14 @@
+# ignore all files for versioning
+*
+
+# allow this file
+!.gitignore
+
+# allow default files used in
+!*.png
+!main.bib
+!main.tex
+!*.pdf
+!*.md
+
+# add own files needed here
