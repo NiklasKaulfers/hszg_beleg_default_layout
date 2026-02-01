@@ -23,26 +23,28 @@
 % -------------------------------------------------------
 % Titelseiten-Informationen (Diese Abändern)
 % -------------------------------------------------------
-\title{Softwaretests in dem Vier-Gewinnt-Projekt der IIb23}
+\title{Erstellung einer Arbeit in \LaTeX}
 
 % Art der Arbeit + Studiengang
-\newcommand{\arbeitstyp}{Beleg}
+\newcommand{\typeofwork}{Beleg}
 % Modul / Lehrveranstaltung + Dozent:innen
-\newcommand{\modul}{Modul / Lehrveranstaltung: Grundlagen des Softwaretestens\\
-Dozent: Prof.\ Dr.\ Matthias Längrich}
+\newcommand{\modul}{Modul / Lehrveranstaltung: Das Erstellen einer Arbeit\\
+Dozent: Prof.\ Dr.\ Maxima Musterfrau}
 % Hochschule + Fakultät
-\newcommand{\hochschule}{
+\newcommand{\university}{
 \includegraphics[height=2.5cm]{LOGO_HSZG_SUBLINE_GRANIT.png}\\[5mm]
 Hochschule Zittau/Görlitz \\ Fakultät Elektrotechnik und Informatik
 }
 
 % Autor
 \author{
-    Niklas Kaulfers \\[2mm]
-    Matrikelnummer: 1064032
+    Max Mustermann \\[2mm]
+    Matrikelnummer: 123456
 }
+\newcommand{\lastname}{Mustermann}
+
 % Betreuer (für BA-Thesis, sonst leer lassen)
-\newcommand{\betreuer}{}
+\newcommand{\supervisor}{}
 
 % Datum der Abgabe
 \date{Abgabedatum: \today}
@@ -54,19 +56,19 @@ Hochschule Zittau/Görlitz \\ Fakultät Elektrotechnik und Informatik
 \renewcommand{\maketitle}{
     \begin{titlepage}
         \centering
-        {\Large \hochschule\par}
+        {\Large \university\par}
         \vfill
 
         {\huge \bfseries \@title\par}
         \vspace{1cm}
 
-        {\large \arbeitstyp\par}
+        {\large \typeofwork\par}
         \vspace{0.5cm}
 
         {\large \modul\par}
         \vspace{0.5cm}
 
-        {\large \betreuer\par}
+        {\large \supervisor\par}
         \vspace{1.5cm}
 
         {\Large \@author\par}
@@ -84,8 +86,8 @@ Hochschule Zittau/Görlitz \\ Fakultät Elektrotechnik und Informatik
     \fancyhead[C]{%
         \includegraphics[height=1.25cm]{LOGO_HSZG_SUBLINE_GRANIT_ICON_ONLY.png}%
     }
-    \fancyfoot[L]{\sffamily Kaulfers}
-    \fancyfoot[C]{\sffamily \arbeitstyp}
+    \fancyfoot[L]{\sffamily \lastname}
+    \fancyfoot[C]{\sffamily \typeofwork}
     \fancyfoot[R]{\sffamily\thepage}
     \renewcommand{\footrulewidth}{0.4pt}
 }

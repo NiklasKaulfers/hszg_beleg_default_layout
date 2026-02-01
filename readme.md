@@ -6,3 +6,4 @@
 ## How to use
 - Diese Repo klonen (nur main branch) und öffnen
 - Variablen anpassen: Matrikelnummer, Autor, Modul, Art der Arbeit, etc
+- In der Datei .gitignore alle Dateien hinzufügen, welche mit für ein Build benötigt werden
