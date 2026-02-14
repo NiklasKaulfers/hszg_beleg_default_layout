@@ -11,4 +11,8 @@
 !*.pdf
 !*.md
 !*.tex
+
+# allow files in the res folder
+!res/
+
 # add own files needed here

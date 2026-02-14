@@ -1,0 +1,53 @@
+\newcommand{\lastname}{}
+\newcommand{\firstname}{}
+\newcommand{\studentid}{}
+\newcommand{\typeofwork}{}
+\newcommand{\university}{}
+\newcommand{\faculty}{}
+
+\newcommand{\professor}{}
+\newcommand{\subject}{}
+
+\newcommand{\modul}{}
+
+\newcommand{\supervisor}{}
+
+\author{
+    \firstname\ \lastname\ \\[2mm]
+    Matrikelnummer: \studentid\
+}
+\date{Abgabedatum: \today}
+
+\def\university{
+\includegraphics[height=2.5cm]{LOGO_HSZG_SUBLINE_GRANIT.png}\\[5mm]
+Hochschule Zittau/Görlitz \\ \faculty\
+}
+
+\makeatletter
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+        \centering
+        {\Large \university\par}
+        \vfill
+
+        {\huge \bfseries \@title\par}
+        \vspace{1cm}
+
+        {\large \typeofwork\par}
+        \vspace{0.5cm}
+
+        {\large \modul\par}
+        \vspace{0.5cm}
+
+        {\large \supervisor\par}
+        \vspace{1.5cm}
+
+        {\Large \@author\par}
+        \vspace{2cm}
+
+        {\large \@date\par}
+
+        \vfill
+    \end{titlepage}
+}
+\makeatother
