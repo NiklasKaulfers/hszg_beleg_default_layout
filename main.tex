@@ -1,96 +1,28 @@
 \documentclass{report}
-\usepackage{float}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
-\usepackage{graphicx,wrapfig,lipsum}
-\usepackage{geometry}
-\usepackage{minted}
-\usepackage{xcolor}
-\usepackage{csquotes}
-\usepackage{dirtree}
-\usepackage{hyperref}
-\usepackage{fancyhdr}
-\usepackage{makecell}
-\usepackage{array}
-\usepackage[toc,page]{appendix}
-\usepackage[backend=biber,style=ieee]{biblatex}  % or style=numeric, authoryear, etc.
+\input{res/packages.tex}
+\input{res/title.tex}
+\input{res/layout.tex}
 \addbibresource{main.bib}
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
-
-
 
 % -------------------------------------------------------
 % Titelseiten-Informationen (Diese Abändern)
 % -------------------------------------------------------
 \title{Erstellung einer Arbeit in \LaTeX}
-
-% Art der Arbeit + Studiengang
-\newcommand{\typeofwork}{Beleg}
+% Art der Arbeit
+\def\typeofwork{Beleg}
 % Modul / Lehrveranstaltung + Dozent:innen
-\newcommand{\modul}{Modul / Lehrveranstaltung: Das Erstellen einer Arbeit\\
-Dozent: Prof.\ Dr.\ Maxima Musterfrau}
-% Hochschule + Fakultät
-\newcommand{\university}{
-\includegraphics[height=2.5cm]{LOGO_HSZG_SUBLINE_GRANIT.png}\\[5mm]
-Hochschule Zittau/Görlitz \\ Fakultät Elektrotechnik und Informatik
-}
-
+\def\subject{Das Erstellen einer Arbeit}
+\def\professor{Prof.\ Dr.\ Maxim Musterfrau}
+% Fakultät
+\def\faculty{Elektrotechnik/Informatik}
 % Autor
-\author{
-    Max Mustermann \\[2mm]
-    Matrikelnummer: 123456
-}
-\newcommand{\lastname}{Mustermann}
+\def\firstname{Max}
+\def\lastname{Mustermann}
+\def\studentid{123456}
 
 % Betreuer (für BA-Thesis, sonst leer lassen)
-\newcommand{\supervisor}{}
-
-% Datum der Abgabe
-\date{Abgabedatum: \today}
-
-% -------------------------------------------------------
-% Titelseite neu definieren
-% -------------------------------------------------------
-\makeatletter
-\renewcommand{\maketitle}{
-    \begin{titlepage}
-        \centering
-        {\Large \university\par}
-        \vfill
-
-        {\huge \bfseries \@title\par}
-        \vspace{1cm}
-
-        {\large \typeofwork\par}
-        \vspace{0.5cm}
-
-        {\large \modul\par}
-        \vspace{0.5cm}
-
-        {\large \supervisor\par}
-        \vspace{1.5cm}
-
-        {\Large \@author\par}
-        \vspace{2cm}
-
-        {\large \@date\par}
-
-        \vfill
-    \end{titlepage}
-}
-\makeatother
-
-
-\fancypagestyle{plain}{%
-    \fancyhead[C]{%
-        \includegraphics[height=1.25cm]{LOGO_HSZG_SUBLINE_GRANIT_ICON_ONLY.png}%
-    }
-    \fancyfoot[L]{\sffamily \lastname}
-    \fancyfoot[C]{\sffamily \typeofwork}
-    \fancyfoot[R]{\sffamily\thepage}
-    \renewcommand{\footrulewidth}{0.4pt}
-}
+\def\supervisor{}
 
 \begin{document}
 
