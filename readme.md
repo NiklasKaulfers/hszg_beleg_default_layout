@@ -9,7 +9,7 @@
 - Seitennummerierung (römisch für Gliederung, dann arabisch)
 - Bereitstellung einer Bibtex-Konfiguration
 ## How to use
-- Diese Repo klonen (nur main branch) und öffnen
+- Diese Repo als Template verwenden
 - Variablen anpassen: Matrikelnummer, Autor, Modul, Art der Arbeit, etc
 - In der Datei .gitignore alle Dateien hinzufügen, welche mit für ein Build benötigt werden
 - Zitationen nach bibtex in main.bib speichern und dann im Dokument nutzen (Beispiel kann gelöscht werden)
