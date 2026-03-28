@@ -1,6 +1,16 @@
 \fancypagestyle{plain}{%
+    \fancyhead[L]{%
+        \begin{minipage}[b]{0.3\textwidth}
+            \raggedright\sffamily \leftmark\ 
+        \end{minipage}
+    }
     \fancyhead[C]{%
-        \includegraphics[height=1.25cm]{LOGO_HSZG_SUBLINE_GRANIT_ICON_ONLY.png}%
+        \includegraphics[height=1.25cm]{res/LOGO_HSZG_SUBLINE_GRANIT_ICON_ONLY.png}%
+    }
+    \fancyhead[R]{%
+        \begin{minipage}[b]{0.3\textwidth}
+            \raggedleft\sffamily \rightmark\ 
+        \end{minipage}
     }
     \fancyfoot[L]{\sffamily \lastname}
     \fancyfoot[C]{\sffamily \typeofwork}
